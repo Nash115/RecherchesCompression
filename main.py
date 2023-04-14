@@ -14,12 +14,12 @@ def generateFiles():
                 file.write(car[randint(0,len(car)-1)])
     """
     with open("files/file0.txt","w",encoding="utf8") as file:
-        for i in range(100000):
+        for i in range(1000000):
             file.write("a")
     with open("files/file1.txt","w",encoding="utf8") as file:
-            for i in range(100000):
+            for i in range(1000000):
                 file.write(car[randint(0,len(car)-1)])
-            
+
 
 # Ecriture du temps
 
@@ -65,6 +65,6 @@ for nbFile in range(2):
             tailleFinale = os.path.getsize("files/compressed/file" + str(nbFile) + ".zip")
             elapsed_time = end_time - start_time
             times.append(elapsed_time*1000)
-        moyenneTemps = moyenne(times)
+        moyenneTemps = round(moyenne(times),3)
         listePourCSV.append({"Type":nbFile, "Compression(0-9)":levelCompression, "TempsMoyen(ms)":moyenneTemps, "TailleInitiale(ko)":tailleInitiale/1000, "TailleFinale(ko)":tailleFinale/1000})
         writeInCSV(listePourCSV)
