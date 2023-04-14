@@ -14,7 +14,7 @@ def generateFiles():
                 file.write(car[randint(0,len(car)-1)])
     """
     with open("files/file0.txt","w",encoding="utf8") as file:
-        for i in range(1000):
+        for i in range(100000):
             file.write("a")
     with open("files/file1.txt","w",encoding="utf8") as file:
             for i in range(100000):
