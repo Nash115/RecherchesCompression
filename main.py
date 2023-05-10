@@ -71,7 +71,7 @@ for nbFile in range(2):
             elapsed_time = end_time - start_time
             times.append(elapsed_time*1000)
         moyenneTemps = round(moyenne(times),3)
-        print("Temps de compression pour 'file" + str(nbFile) + ".txt' : " + str(moyenneTemps) + "ms. Avec une compression de " + levelCompression)
+        print("Temps de compression pour 'file" + str(nbFile) + ".txt' : " + str(moyenneTemps) + "ms. Avec une compression de " + str(levelCompression))
 
         for i in range(50):
             start_time = time.perf_counter()
